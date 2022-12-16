@@ -1,0 +1,77 @@
+mov ah, 0x0e
+mov al, 'H'
+int 0x10
+
+mov ah, 0x0e
+mov al, 'I'
+int 0x10
+
+mov ah, 0x0e
+mov al, '!'
+int 0x10
+
+mov ah, 0x0e
+mov al, ' '
+int 0x10
+
+mov ah, 0x0e
+mov al, 'P'
+int 0x10
+
+mov ah, 0x0e
+mov al, 'r'
+int 0x10
+
+mov ah, 0x0e
+mov al, 'e'
+int 0x10
+
+mov ah, 0x0e
+mov al, 's'
+int 0x10
+
+mov ah, 0x0e
+mov al, 's'
+int 0x10
+
+mov ah, 0x0e
+mov al, ' '
+int 0x10
+
+mov ah, 0x0e
+mov al, 'E'
+int 0x10
+
+mov ah, 0x0e
+mov al, 'n'
+int 0x10
+
+mov ah, 0x0e
+mov al, 't'
+int 0x10
+
+mov ah, 0x0e
+mov al, 'e'
+int 0x10
+
+mov ah, 0x0e
+mov al, 'r'
+int 0x10
+
+mov ah, 0x0e
+mov al, '!'
+int 0x10
+
+
+mov ah, 0
+int 0x16
+
+shutdown:
+	mov ax, 5307h
+	mov cx, 3
+	mov bx, 1
+	int 15h
+
+jmp $
+times 510-($-$$) db 0
+db 0x55, 0xaa
